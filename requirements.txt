@@ -1,5 +1,6 @@
 fastapi
 pydantic
 openai
-slowapi
 pandas
+slowapi
+
