@@ -108,7 +108,7 @@ def sanitize_input(query: str) -> str:
 
 def classify_query(query: str) -> dict:
     """
-    Classify a user query using GPT-4o and a fallback rule-based filter.
+    Classify a user query using GPT-4o-mini and a fallback rule-based filter.
     Returns a dict with classification and confidence.
     """
     try:
@@ -120,9 +120,9 @@ def classify_query(query: str) -> dict:
         # Prepare the prompt
         formatted_prompt = PROMPT_TEMPLATE.format(query=query)
 
-        # Call GPT-4o
+        # Call GPT-4o-mini
         response = client.chat.completions.create(
-            model="gpt-4o",
+            model="gpt-4o-mini",
             messages=[
                 {"role": "system", "content": "You are a precise and security-focused assistant."},
                 {"role": "user", "content": formatted_prompt}
