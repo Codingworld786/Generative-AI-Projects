@@ -24,7 +24,7 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 # Initialize FastAPI app
-app = FastAPI(title="IOD Data protection(restrict Create, update and delete queries on the database)")
+app = FastAPI(title="Data protection(restrict Create, update and delete queries on the database)")
 
 # Initialize rate limiter
 limiter = Limiter(key_func=get_remote_address)
