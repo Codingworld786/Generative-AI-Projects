@@ -50,7 +50,7 @@ This project automates the following tasks:
  
   - 
 Sample input URL: https://www.deeplearning.ai/courses/machine-learning-specialization/
-Sample output URL : 
+Sample output looks like below: 
 - ![image](https://github.com/user-attachments/assets/709e6bf1-12c2-49d4-91f8-bec901a6f737)
 
 
