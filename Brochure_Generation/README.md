@@ -47,4 +47,10 @@ This project automates the following tasks:
 - 📂 **Python Scripts**:  
   - Modular code for scraping, processing, and summarizing
   - Extensible for batch processing or crawling multiple URLs
+ 
+  - 
+Sample input URL: https://www.deeplearning.ai/courses/machine-learning-specialization/
+Sample output URL : 
+- ![image](https://github.com/user-attachments/assets/709e6bf1-12c2-49d4-91f8-bec901a6f737)
+
 
