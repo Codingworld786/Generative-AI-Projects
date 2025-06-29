@@ -63,7 +63,7 @@ We chose **n8n**, a visual automation platform, to build AI agents that connect 
 
 ### 🔄 Agent Flow 1: Conversational Memory Agent
 
-![Conversational Memory Agent](workflow1.jpg)
+![Conversational Memory Agent](workflow1.png)
 
 This flow helps users retrieve real-time, up-to-date information directly from their phone by chatting with the Telegram bot.
 
@@ -71,7 +71,7 @@ This flow helps users retrieve real-time, up-to-date information directly from t
 
 ### 🔄 Agent Flow 2: Real-Time News/Info Agent
 
-![Real-Time News Agent](workflow2.jpg)
+![Real-Time News Agent](workflow2.png)
 
 This flow fetches and filters news or information based on user preferences and sends it via Telegram.
 
