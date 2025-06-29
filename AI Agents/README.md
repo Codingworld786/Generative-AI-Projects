@@ -63,10 +63,17 @@ We chose **n8n**, a visual automation platform, to build AI agents that connect 
 
 ### 🔄 Agent Flow 1: Conversational Memory Agent
 
-
-
+![Conversational Memory Agent](result1.jpg)
 
 This flow helps users retrieve real-time, up-to-date information directly from their phone by chatting with the Telegram bot.
+
+---
+
+### 🔄 Agent Flow 2: Real-Time News/Info Agent
+
+![Real-Time News Agent](result2.jpg)
+
+This flow fetches and filters news or information based on user preferences and sends it via Telegram.
 
 ---
 
@@ -74,9 +81,14 @@ This flow helps users retrieve real-time, up-to-date information directly from t
 
 | File / Folder                  | Description                                          |
 |-------------------------------|------------------------------------------------------|
-| `/flows/Telegram_Agent.json`  | n8n flow for the Gemini + memory chatbot agent       |
-| `/flows/telegram_3.json`      | n8n flow for real-time news/info agent               |
-| `/docs/`                      | Screenshots and step-by-step explanation screenshots |
+| `README.md`                   | Project overview and instructions                   |
+| `Telegram_Agent.json`         | n8n flow for the Gemini + memory chatbot agent       |
+| `telegram_3.json`             | n8n flow for real-time news/info agent               |
+| `result1.jpg`                 | Screenshot of the conversational memory agent flow  |
+| `result2.jpg`                 | Screenshot of the real-time news/info agent flow    |
+| `workflow1.png`               | Step-by-step explanation of the memory agent setup  |
+| `workflow2.png`               | Step-by-step explanation of the news agent setup    |
+| `workflows/`                  | Folder containing additional workflow configurations|
 
 ---
 
@@ -88,8 +100,6 @@ Through this project, you'll:
 - 🔧 Build usable agents without backend-heavy setups
 - 📱 Enable real-time, mobile-friendly AI interactions
 - 🧠 Understand how LLMs + memory + APIs = actual useful tools
-
----
 
 > 🎯 The real benefit?  
 > You don’t just learn to **use AI**, you learn to **make AI useful.**
@@ -110,4 +120,3 @@ Feel free to clone, fork, or star this repo ⭐
 Have questions or ideas? Drop them in the issues tab!
 
 ---
-
