@@ -1,0 +1,202 @@
+{
+  "name": "Telegram Agent",
+  "nodes": [
+    {
+      "parameters": {
+        "updates": [
+          "message"
+        ],
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.telegramTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -180,
+        -40
+      ],
+      "id": "f8cb1602-3efc-41a4-973a-555a35346524",
+      "name": "Telegram Trigger",
+      "webhookId": "c590ce62-ddb5-4332-9d13-0f379915c8f9",
+      "credentials": {
+        "telegramApi": {
+          "id": "eMI07vWVpbjX9ZVa",
+          "name": "Telegram account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $json.message.text }}\n",
+        "options": {
+          "systemMessage": "={\n  \"prompt\": \"You are a helpful and knowledgeable weather expert. Use tools such as SerpAPI (Google Search) to fetch the most recent and accurate weather updates. Understand the user's query and provide a clear, concise response based on real-time information. The user's question is: What's the weather like in New York today?\"\n}\n"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2,
+      "position": [
+        40,
+        -40
+      ],
+      "id": "9a7659a5-704f-4eb8-9872-9001c59c8d16",
+      "name": "AI Agent"
+    },
+    {
+      "parameters": {
+        "modelName": "models/gemini-1.5-flash",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1,
+      "position": [
+        40,
+        180
+      ],
+      "id": "854cdd21-c764-40c3-a404-bd57549c7f44",
+      "name": "Google Gemini Chat Model",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "vkXoK7Znzpyr33Fz",
+          "name": "Google Gemini(PaLM) Api account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $('Telegram Trigger').item.json.message.chat.id }}",
+        "text": "={{ $json.output }}\n",
+        "additionalFields": {
+          "appendAttribution": true
+        }
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        460,
+        -80
+      ],
+      "id": "de93d9a7-fe71-4bf0-b396-dc80fe353656",
+      "name": "Send a text message",
+      "webhookId": "533bdf7b-1723-43c5-a3d2-daf33d295a71",
+      "alwaysOutputData": false,
+      "notesInFlow": false,
+      "credentials": {
+        "telegramApi": {
+          "id": "eMI07vWVpbjX9ZVa",
+          "name": "Telegram account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "sessionIdType": "customKey",
+        "sessionKey": "={{ $('Telegram Trigger').item.json.message.chat.id }}",
+        "contextWindowLength": 10
+      },
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.3,
+      "position": [
+        220,
+        180
+      ],
+      "id": "9c66c463-a397-4c3d-a13b-7bd3add54f18",
+      "name": "Simple Memory"
+    },
+    {
+      "parameters": {
+        "description": "Please act as helpfull assistant and provide response for user's query based on search from serpAPI (google search)",
+        "workflowId": {
+          "__rl": true,
+          "value": "4XtTVvB6c7bvh07M",
+          "mode": "list",
+          "cachedResultName": "telegram_3"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {},
+          "matchingColumns": [],
+          "schema": [],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.toolWorkflow",
+      "typeVersion": 2.2,
+      "position": [
+        400,
+        180
+      ],
+      "id": "527f1b55-c515-4487-ac80-aaa3a8f9c275",
+      "name": "my search engine node"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Telegram Trigger": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent": {
+      "main": [
+        [
+          {
+            "node": "Send a text message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Simple Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "my search engine node": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "4ac45b74-57b4-40e4-b159-c96f95a1d20f",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "599f33089a5f8cda20f0450fe6a9e6c2673f90a71661d43dece96de963cdb5db"
+  },
+  "id": "wYiBi9ckzBAygz0L",
+  "tags": []
+}
