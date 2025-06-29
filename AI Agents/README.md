@@ -95,8 +95,8 @@ This flow fetches and filters news or information based on user preferences and 
 
 Here are the final results from testing the Telegram Bot:
 
-![Telegram Bot Interaction – Step 1](result1.png)  
-![Telegram Bot Interaction – Step 2](result2.png)
+![Telegram Bot Interaction – Step 1](result1.jpg)  
+![Telegram Bot Interaction – Step 2](result2.jpg)
 
 
 
