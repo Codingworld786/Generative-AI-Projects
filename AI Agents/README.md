@@ -88,9 +88,17 @@ This flow fetches and filters news or information based on user preferences and 
 | `result2.jpg`                 | Screenshot of the real-time news/info agent flow    |
 | `workflow1.png`               | Step-by-step explanation of the memory agent setup  |
 | `workflow2.png`               | Step-by-step explanation of the news agent setup    |
-| `workflows/`                  | Folder containing additional workflow configurations|
-
+                
 ---
+
+## 🖼️ Final Results & Testing Screenshots
+
+Here are the final results from testing the Telegram Bot:
+
+![Telegram Bot Interaction – Step 1](result1.png)  
+![Telegram Bot Interaction – Step 2](result2.png)
+
+
 
 ## ✅ Final Thoughts: Why This Matters
 
