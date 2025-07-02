@@ -1,5 +1,5 @@
 
-# 🚀 Gradio Day! – LLM UI Playground
+# Gradio Day! – LLM UI Playground with OpenAI, Claude, and Gemini
 
 Welcome to **Gradio Day**, a fun and practical notebook to help you build user interfaces using the **Gradio** framework and experiment with top LLMs like **OpenAI (GPT-4o-mini)**, **Claude 3 (Haiku)**, and optionally **Google Gemini**.
 
@@ -42,9 +42,19 @@ This notebook demonstrates how to:
 - Generates a **markdown-formatted brochure** via streaming
 
 ---
-some Screeshots from testing:
-![image](https://github.com/user-attachments/assets/60d64e78-6ad4-4c8f-a655-52cdc5e7df20)
+## 📸 Some Screenshots from Testing
+
+Here are a few snapshots from the Gradio interfaces in action:
+
+### 🧪 GPT Model UI
 ![image](https://github.com/user-attachments/assets/189e144b-20ac-43d6-9a39-09950e9f4eeb)
+
+### 🤖 Claude Model UI
+![image](https://github.com/user-attachments/assets/60d64e78-6ad4-4c8f-a655-52cdc5e7df20)
+
+
+
+
 
 
 ---
