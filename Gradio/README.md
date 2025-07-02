@@ -1,7 +1,7 @@
 
 # Gradio Day! – LLM UI Playground with OpenAI, Claude, and Gemini
 
-Welcome to **Gradio Day**, a fun and practical notebook to help you build user interfaces using the **Gradio** framework and experiment with top LLMs like **OpenAI (GPT-4o-mini)**, **Claude 3 (Haiku)**, and optionally **Google Gemini**.
+Welcome to **Gradio Day**, a fun and practical notebook to help you build user interfaces using the **Gradio** framework and experiment with top LLMs like **OpenAI (GPT-4o-mini)**, **Claude 3 (Haiku)**, and **Google Gemini**.
 
 ---
 
