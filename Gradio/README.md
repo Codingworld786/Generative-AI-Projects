@@ -49,7 +49,7 @@ Here are a few snapshots from the Gradio interfaces in action:
 ### 🧪 Gemini Model UI for general queries
 ![image](https://github.com/user-attachments/assets/189e144b-20ac-43d6-9a39-09950e9f4eeb)
 
-### 🤖 GPT Model UI for Brichure Generation
+### 🤖 GPT Model UI for Brochure Generation
 ![image](https://github.com/user-attachments/assets/60d64e78-6ad4-4c8f-a655-52cdc5e7df20)
 
 
